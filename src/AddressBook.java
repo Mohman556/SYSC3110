@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Iterator;
+
 
 public class AddressBook {
     public ArrayList<BuddyInfo> contactList;
@@ -10,10 +10,11 @@ public class AddressBook {
 
     public static void main(String[] args){
         System.out.println("Address Book: ");
-        BuddyInfo Buddy = new BuddyInfo("Homer", "Carleton", "613");
+        BuddyInfo Buddy = new BuddyInfo("Lanks", "Carleton", "613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(Buddy);
         addressBook.removeBuddy(Buddy);
+
 
     }
 
@@ -21,19 +22,16 @@ public class AddressBook {
         if (Buddy != null){
             contactList.add(Buddy);
             System.out.println("Added " + Buddy.getName() + " To Address book");
+
         }
     }
 
     public void removeBuddy(BuddyInfo Buddy){
-        if (!contactList.isEmpty()) {
-            for (Iterator<BuddyInfo> iter = contactList.iterator(); iter.hasNext();) {
-                BuddyInfo buddy = iter.next();
-                if (buddy.equals(Buddy)) {
-                    iter.remove();
-                    System.out.println("Removed " + Buddy.getName() + " From Address Book");
-                }
-            }
-        }
+        contactList.remove(Buddy);
+        System.out.println("Removed " + Buddy.getName() + " From Address Book");
+
+
     }
+
 
 }
