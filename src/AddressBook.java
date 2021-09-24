@@ -32,6 +32,15 @@ public class AddressBook {
 
 
     }
+    public void editBuddy(String name, String address, String number, BuddyInfo buddy){
+        System.out.println("Editing Contact: " + name + "...");
+        buddy.setName(name);
+        buddy.setAddress(address);
+        buddy.setpNumber(number);
+        System.out.println("New Info: " + name + " " + number + " " + number);
+
+
+    }
 
 
 }

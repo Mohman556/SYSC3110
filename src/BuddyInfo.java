@@ -32,6 +32,17 @@ public class BuddyInfo {
 
     public String getNumber() {return pNumber;}
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setpNumber(String pNumber) {
+        this.pNumber = pNumber;
+    }
 }
 
 
